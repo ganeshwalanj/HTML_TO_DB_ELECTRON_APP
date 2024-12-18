@@ -1,0 +1,59 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Electron build artifacts
+dist/
+build/
+
+# Compiled files
+*.tsbuildinfo
+*.pyc
+*.pyo
+*.rbc
+*.min.js
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.*.local
+
+# Vscode settings
+.vscode/
+
+# Dependency directories
+bower_components/
+jspm_packages/
+
+# IDE specific files
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Test output
+coverage/
+.nyc_output/
+
+# Miscellaneous
+*.bak
+*.swp
+*.tmp
+*.log.*
