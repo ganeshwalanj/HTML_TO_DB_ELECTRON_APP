@@ -1,0 +1,30 @@
+{
+  "name": "insert-data-from-html-to-db-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "insert-data-from-html-to-db-app",
+    "productName": "INSERT DATA FROM HTML TO DB",
+    "win": {
+      "target": "nsis",
+      "icon": "./build/assets/app.ico",
+      "compression": "maximum"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Using this app user can insert data into mssql from HTML file",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "mssql": "^11.0.1"
+  },
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8"
+  }
+}

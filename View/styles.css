@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f9;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+/* Container for all toasts, positioned at the right side of the screen */
+#toast-container {
+  position: fixed;
+  top: 20px; /* Distance from the top of the screen */
+  right: 20px; /* Distance from the right edge of the screen */
+  z-index: 9999; /* Ensure it's on top of other content */
+  display: flex;
+  flex-direction: column; /* Stack toasts vertically */
+  gap: 10px; /* Space between toasts */
+}
+
+/* Individual Toast Styles */
+.toast {
+  width: 400px;
+  background-color: #333;
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative; /* Needed for positioning the close button */
+  opacity: 0; /* Initially hidden */
+  transform: translateX(100%); /* Position to the right of the screen */
+  transition: transform 0.4s ease, opacity 0.6s ease; /* Smooth animation */
+}
+
+/* Reset button default styles */
+.toast .close-btn {
+  all: unset; /* Reset all inherited and default styles */
+  position: absolute; /* Position relative to the .toast div */
+  top: 8px; /* Distance from the top of the .toast */
+  right: 8px; /* Distance from the right of the .toast */
+  color: white; /* Button color */
+  font-size: 24px; /* Font size for the '×' */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Optional: Style the button when hovered */
+.toast .close-btn:hover {
+  color: #ccc; /* Change color on hover */
+}
+
+.toast.show {
+  opacity: 0.95; /* Show the toast */
+  transform: translateX(0); /* Slide it into view */
+}
+
+.toast.hide {
+  opacity: 0; /* Fade out the toast */
+  transform: translateX(100%); /* Slide it out of view */
+}
+
+/* Toast Types */
+.toast-success {
+  border-left: 5px solid #28a745;
+}
+
+.toast-error {
+  border-left: 5px solid #dc3545;
+}
+
+.toast-info {
+  border-left: 5px solid #007bff;
+}
+
+/* Toast Icon */
+.toast-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Toast Message */
+.toast-message {
+  flex-grow: 1;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}

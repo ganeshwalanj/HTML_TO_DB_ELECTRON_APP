@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML to DB App</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>Insert HTML Table Data into SQL Server</h1>
+
+    <form id="dbForm">
+      <label for="server">Server:</label>
+      <input type="text" id="server" required />
+
+      <label for="sqlport">SQLExpress Port:</label>
+      <input type="number" id="sqlport" />
+
+      <label for="user">DB User:</label>
+      <input type="text" id="user" required />
+
+      <label for="password">DB Password:</label>
+      <input type="password" id="password" required />
+
+      <label for="database">Database Name:</label>
+      <input type="text" id="database" required />
+
+      <label for="tableName">Table Name:</label>
+      <input type="text" id="tableName" required />
+
+      <label for="htmlFile">HTML File Path:</label>
+      <input type="file" id="htmlFile" required />
+
+      <button type="submit">Insert Data</button>
+    </form>
+
+    <div id="toast-container"></div>
+    <!-- Container for the toasts -->
+
+    <script type="module" src="renderer.js"></script>
+  </body>
+</html>
